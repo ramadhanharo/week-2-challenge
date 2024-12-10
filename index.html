@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubavu Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Logo" id="logo">
+      <h1>Shopping List</h1>
+      <div id="centered-logo">
+        <img src="images/logo.jpg" alt="Logo">
+      </div>
+    </header>
+
+    <div class="input-section">
+      <input type="text" id="itemInput" placeholder="Enter item">
+      <input type="number" id="priceInput" placeholder="Enter price" step="0.01">
+      <button id="addButton">Add Item</button>
+    </div>
+
+    <ul id="shoppingList"></ul>
+
+    <div class="controls">
+      <button id="clearButton">Clear List</button>
+      <button id="toggleMode">Switch to Dark Mode</button>
+    </div>
+
+    <!-- Link to Cart -->
+    <div class="cart-link">
+      <a href="cart.html">View Cart</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

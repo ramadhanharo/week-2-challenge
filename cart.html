@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Logo" id="logo">
+      <h1>Shubavu Cart</h1>
+    </header>
+
+    <ul id="cartList"></ul>
+
+    <button id="backButton">Back to List</button>
+  </div>
+
+  <script>
+    const cartList = document.getElementById('cartList');
+    const backButton = document.getElementById('backButton');
+
+    // Load shoppingArray from localStorage
+    const shoppingArray = JSON.parse(localStorage.getItem('shoppingArray')) || [];
+
+    // Display items in the cart
+    shoppingArray.forEach((item, index) => {
+      if (item.inCart) {
+        const li = document.createElement('li');
+        li.textContent = `${item.item} - Ksh ${item.price}`;
+        cartList.appendChild(li);
+      }
+    });
+
+    // Back to list button
+    backButton.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

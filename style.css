@@ -1,0 +1,175 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up body with background image and flexbox for centering */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    /* Background image */
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+/* Container for the shopping list form and items */
+.container {
+    max-width: 600px;
+    width: 100%;
+    /* Slightly transparent white background */
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling with the logo and title */
+header {
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Centered logo styling */
+#centered-logo img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Input fields for the item and price */
+.input-section input {
+    width: 45%;
+    padding: 12px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+.cart-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart-link a {
+    font-size: 1.2rem;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-link a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
+
+/* Buttons for adding items, clearing list, and toggling modes */
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Styling for the shopping list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Purchased item styling */
+li.purchased {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+}
+
+/* Remove item button */
+li button {
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+li button:hover {
+    background-color: #e57373;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    /* Fully black dark mode */
+    background-color: #000; 
+    color: white;
+}
+
+.dark-mode button {
+    background-color: #f44336;
+}
+
+.dark-mode .container {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode li {
+    background-color: #444;
+}
+
+#toggleMode {
+    background-color: #2196F3;
+    margin-top: 20px;
+}
+
+#toggleMode:hover {
+    background-color: #1976D2;
+}
